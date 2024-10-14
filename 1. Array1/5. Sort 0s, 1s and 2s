@@ -1,0 +1,15 @@
+void sortColors(vector<int>& arr) {
+        int n = arr.size();
+        int i= 0, j = 0, k = n-1;
+        while(j<=k){
+            if(arr[j]==0){
+                swap(arr[j++], arr[i++]);
+            }
+            else if(arr[j]==1){
+                j++;
+            }
+            else{
+                swap(arr[k--], arr[j]);
+            }
+        }
+    }
